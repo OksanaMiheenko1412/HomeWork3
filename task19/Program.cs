@@ -3,7 +3,7 @@
 Console.Clear();
 Console.WriteLine("Введите пятизначное число ");
 int a = Convert.ToInt32(Console.ReadLine());
-while (а < 1000 || 99999)
+while (a < 1000 || a > 99999)
 {
     Console.Write("Вы ошиблись! \nВведите пятизначное число");
     a = Convert.ToInt32(Console.ReadLine());
