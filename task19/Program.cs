@@ -1,11 +1,19 @@
 ﻿// task19: на вход (пятизначное число) на выход (является ли число палиндромом)
 
 Console.Clear();
-int n = new Random().Next(10000, 99999); // [10000, 99999]
-Console.WriteLine($"Случайное число: {n}");
-int n2 = n / 1000; // первые две цифры
-int n4 = n % 100; // последние две цифры
-if(n2 == n4)
-    Console.Write("yes");
-else
-    Console.Write("no");    
+Console.WriteLine("Введите пятизначное число ");
+int a = Convert.ToInt32(Console.ReadLine());
+while (а < 1000 || 99999)
+{
+    Console.Write("Вы ошиблись! \nВведите пятизначное число");
+    a = Convert.ToInt32(Console.ReadLine());
+}   
+int a1 =  a / 10000;
+int a2 = (a / 1000) % 10;
+int a4 = (a % 100) / 10;
+int a5 = a % 10;
+
+if ( a1 == a5 && a2 == a4)
+    Console.WriteLine("yes");
+else    
+    Console.WriteLine("no");   
